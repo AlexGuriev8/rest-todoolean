@@ -9,6 +9,16 @@
     <title>Todoolean</title>
 </head>
 <body>
+    <input type="text" id="nuova-voce" placeholder="Inserisci una nuova voce">
+    <button class="inserisci">Inserisci</button>
+    <ol class="todos"></ol>
+
+    <script id="entry-template" type="text/x-handlebars-template">
+        <li data-id={{id}}>{{text}}
+            <span class="delete">X</span>
+        </li>
+    </script>
+
     <script src="js/main.js"></script>
 </body>
 </html>
