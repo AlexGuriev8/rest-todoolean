@@ -16,6 +16,15 @@ $(document).ready(function(){
         elemento.next().removeClass('hidden');
     });
 
+    $('#nuova-voce').keydown(function (e) {
+        if (e.which == 13 || e.keyCode == 13) {
+            var newElement = $('#nuova-voce').val();
+            createElement(newElement);
+            $('#nuova-voce').val('');
+        }
+    });
+
+    
     $(document).on('keydown', '.input-add', function () {
         var idNewElement = $(this).parent().attr('data-id');
         if (event.which == 13 || event.keyCode == 13) {
